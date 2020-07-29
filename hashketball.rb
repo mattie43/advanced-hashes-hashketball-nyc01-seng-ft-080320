@@ -150,6 +150,6 @@ def player_stats(player_name)
   hash
 end
 def big_shoe_rebounds
-  
-  #find largest shoe, return number of reboundsgame_hash
+  #find largest shoe, return number of rebounds
+  game_hash
 end
