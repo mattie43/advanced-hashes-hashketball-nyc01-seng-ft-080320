@@ -145,3 +145,7 @@ def player_numbers(team_name)
   game_hash
   array
 end
+def player_stats(player_name)
+  game_hash
+  hash
+end
