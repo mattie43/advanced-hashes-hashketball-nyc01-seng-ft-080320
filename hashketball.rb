@@ -130,6 +130,18 @@ end
 def num_points_scored(player_name)
   game_hash
 end
-def show_size(player_name)
+def shoe_size(player_name)
   game_hash
+end
+def team_colors(team_name)
+  game_hash
+  array
+end
+def team_names
+  game_hash
+  array
+end
+def player_numbers(team_name)
+  game_hash
+  array
 end
