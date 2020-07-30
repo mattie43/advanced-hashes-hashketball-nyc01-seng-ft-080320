@@ -154,12 +154,13 @@ def team_names
   game_hash.each_with_object([]) { |(key, value), teams| teams << value[:team_name] }
 end
 def player_numbers(team_name)
+  numbers = []
   game_hash.each do |location, team_data|
     if team_data[:team_name] == team_name
-      team_data[:players].each_with_object([]) { |data, numbers| numbers << data[:number] }
+      team_data[:players].each { |data, numbers| numbers << data[:number] }
     end
   end
-  binding.pry
+  numbers
 end
 def player_stats(player_name)
   game_hash
