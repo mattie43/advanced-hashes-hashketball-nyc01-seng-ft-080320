@@ -155,7 +155,11 @@ def team_names
 end
 def player_numbers(team_name)
   game_hash.each do |location, team_data|
-    binding.pry
+    if team_data[:team_name] == team_name
+      team_data[:players].each_with_object([]) do |a,b,c|
+        binding.pry
+      end
+    end
   end
 end
 def player_stats(player_name)
