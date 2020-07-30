@@ -252,7 +252,16 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
-  =begin
+  longest_name = player_with_longest_name
+  most_steals = 0
+  player = ""
+  game_hash[:home][:players].each do |data|
+    binding.pry
+  end
+end
+
+=begin
+def long_name_steals_a_ton?
   longest_name = player_with_longest_name
   most_steals = 0
   player = ""
@@ -269,5 +278,5 @@ def long_name_steals_a_ton?
     end
   end
   player == longest_name
-  =end
 end
+=end
