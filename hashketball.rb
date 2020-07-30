@@ -216,18 +216,19 @@ def winning_team
   game_hash.each do |location, team_data|
     if location == :home
       team_data.each do |attribute, data|
-        team_home = attribute
+        team_home = data if attribute == :team_name
         if attribute == :players
           data.each { |d_i| points_home += d_i[points] }
         end
       end
     else
       team_data.each do |attribute, data|
+        team_away = data if attribute == :team_name
         if attribute == :players
           data.each { |d_i| points_away += d_i[points] }
         end
       end
     end
   end
-  #points_home if 
+  team_home if points_home > points_away
 end
