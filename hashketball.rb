@@ -179,8 +179,10 @@ def big_shoe_rebounds
     team_data.each do |attribute, data|
       if attribute == :players
         data.each do |d_i|
-          shoe_size = d_i[:shoe] if shoe_size < d_i[:shoe]
-          rebounds = d_i[:rebounds] if rebounds < d_i[:rebounds]
+          if shoe_size < d_i[:shoe]
+            shoe_size = d_i[:shoe]
+            rebounds = d_i[:rebounds]
+          end
         end
       end
     end
