@@ -222,6 +222,8 @@ def winning_team
     data.each { |d_i| points_away += d_i[:points] }
   end
   
+  binding.pry
+  
   if points_home > points_away
     team_home
   else
