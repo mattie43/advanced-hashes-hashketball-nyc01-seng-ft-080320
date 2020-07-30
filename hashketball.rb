@@ -153,10 +153,7 @@ def shoe_size(player_name)
 end
 def team_colors(team_name)
   game_hash.each do |location, team_data|
-    binding.pry
-    team_data.each do |attribute, data|
-      binding.pry
-    end
+    return team_data[:colors] if team_data[:team_name] == team_name
   end
 end
 def team_names
