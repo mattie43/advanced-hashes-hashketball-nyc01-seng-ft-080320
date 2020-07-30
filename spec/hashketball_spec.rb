@@ -212,10 +212,10 @@ describe 'hashketball' do
 
   end
   
-  describe '#player_with_longest_name' do
+  describe '#long_name_steals_a_ton?' do
 
-    it 'returns the player with the longest name' do
-      expect(player_with_longest_name).to eq("Bismack Biyombo")
+    it 'returns true if the player with longest name had the most steals' do
+      expect(long_name_steals_a_ton?).to eq(true)
     end
 
   end
