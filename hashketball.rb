@@ -131,9 +131,7 @@ end
 # Write code here
 def num_points_scored(player_name)
   game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each { |d_i| return d_i[:points] if d_i[:player_name] == player_name }
+    team_data.each { |data| return d_i[:points] if d_i[:player_name] == player_name }
       end
     end
   end
@@ -141,11 +139,7 @@ end
 
 def shoe_size(player_name)
   game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each { |d_i| return d_i[:shoe] if d_i[:player_name] == player_name }
-      end
-    end
+    team_data[:players].each { |data| return data[:shoe] if data[:player_name] == player_name }
   end
 end
 
