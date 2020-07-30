@@ -229,5 +229,5 @@ def winning_team
       end
     end
   end
-  points_home if 
+  #points_home if 
 end
