@@ -165,8 +165,9 @@ end
 def player_stats(player_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
-      binding.pry
-      #return data if data[:player_name] == player_name && attribute == :players
+      if attribute == :players
+        data.each { |d_i| return data if d_i[:player_name] == player_name }
+      end
     end
   end
 end
