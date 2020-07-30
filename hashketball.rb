@@ -157,8 +157,9 @@ def team_colors(team_name)
   end
 end
 def team_names
-  game_hash
-  array
+  game_hash.each_with_object do |location, team_data, teams|
+    teams << team_data[:team_name]
+  end
 end
 def player_numbers(team_name)
   game_hash
