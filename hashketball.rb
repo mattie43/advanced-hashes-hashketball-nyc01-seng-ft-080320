@@ -157,6 +157,7 @@ def player_numbers(team_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if data == team_name
+        binding.pry
         data.each_with_object([]) { |d_i, numbers| arr << d_i[:number] }
       end
     end
