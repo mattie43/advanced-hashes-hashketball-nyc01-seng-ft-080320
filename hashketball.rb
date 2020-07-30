@@ -154,18 +154,13 @@ def team_names
   game_hash.each_with_object([]) { |(key, value), teams| teams << value[:team_name] }
 end
 def player_numbers(team_name)
-  arr = []
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
-      binding.pry
-      if attribute == :players
-        data.each do |d_i|
-          arr << d_i[:number]
-        end
+      if data == team_name
+        data.each_with_object([]) { |d_i, numbers| arr << d_i[:number] }
       end
     end
   end
-  arr
 end
 def player_stats(player_name)
   game_hash
