@@ -159,6 +159,7 @@ def player_numbers(team_name)
       team_data[:players].each_with_object([]) { |data, numbers| numbers << data[:number] }
     end
   end
+  binding.pry
 end
 def player_stats(player_name)
   game_hash
