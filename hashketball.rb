@@ -217,7 +217,7 @@ def winning_team
   
   game_hash[:home][:players].each do |data1|
     binding.pry
-    data1.each { |d_i| points_home += d_i[:points] }
+    #data1.each { |d_i| points_home += d_i[:points] }
   end
   
   binding.pry
