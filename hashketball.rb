@@ -210,11 +210,13 @@ end
 
 def winning_team
   team_home = ""
+  team_away = ""
   points_home = 0
   points_away = 0
   game_hash.each do |location, team_data|
     if location == :home
       team_data.each do |attribute, data|
+        binding.pry
         if attribute == :players
           data.each { |d_i| points_home += d_i[points] }
         end
