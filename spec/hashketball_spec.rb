@@ -195,5 +195,13 @@ describe 'hashketball' do
     end
 
   end
+  
+  describe '#winning_team' do
+
+    it 'returns the winning team with the most points' do
+      expect(most_points_scored).to eq("Ben Gordon")
+    end
+
+  end
 
 end
