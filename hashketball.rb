@@ -156,9 +156,7 @@ end
 def player_numbers(team_name)
   game_hash.each do |location, team_data|
     if team_data[:team_name] == team_name
-      team_data[:players].each_with_object([]) do |(k, v), numbers|
-        binding.pry
-      end
+      team_data[:players].each_with_object([]) { |data, numbers| numbers << data[:number] }
     end
   end
 end
