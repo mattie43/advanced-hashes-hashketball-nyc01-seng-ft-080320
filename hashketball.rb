@@ -197,6 +197,7 @@ def most_points_scored
     team_data.each do |attribute, data|
       if attribute == :players
         data.each do |d_i|
+          binding.pry
           if points < d_i[:points]
             player = d_i[:player]
             points = d_i[:points]
