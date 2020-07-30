@@ -204,10 +204,10 @@ describe 'hashketball' do
 
   end
   
-  describe '#winning_team' do
+  describe '#player_with_longest_name' do
 
-    it 'returns the winning team with the most points' do
-      expect(winning_team).to eq("Brooklyn Nets")
+    it 'returns the player with the longest name' do
+      expect(player_with_longest_name).to eq("Bismack Biyombo")
     end
 
   end
