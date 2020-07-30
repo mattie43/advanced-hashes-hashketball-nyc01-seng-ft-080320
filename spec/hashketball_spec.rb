@@ -211,5 +211,13 @@ describe 'hashketball' do
     end
 
   end
+  
+  describe '#player_with_longest_name' do
+
+    it 'returns the player with the longest name' do
+      expect(player_with_longest_name).to eq("Bismack Biyombo")
+    end
+
+  end
 
 end
