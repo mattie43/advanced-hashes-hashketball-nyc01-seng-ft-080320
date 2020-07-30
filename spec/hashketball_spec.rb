@@ -203,5 +203,13 @@ describe 'hashketball' do
     end
 
   end
+  
+  describe '#winning_team' do
+
+    it 'returns the winning team with the most points' do
+      expect(winning_team).to eq("Brooklyn Nets")
+    end
+
+  end
 
 end
