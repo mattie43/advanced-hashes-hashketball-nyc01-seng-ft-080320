@@ -248,7 +248,7 @@ def long_name_steals_a_ton?
   most_steals = 0
   player = ""
   game_hash[:home][:players].each do |data|
-    binding.pry
+    #binding.pry
   end
 end
 
