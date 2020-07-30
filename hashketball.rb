@@ -199,7 +199,7 @@ def most_points_scored
         data.each do |d_i|
           binding.pry
           if points < d_i[:points]
-            player = d_i[:player]
+            player = d_i[:player_name]
             points = d_i[:points]
           end
         end
