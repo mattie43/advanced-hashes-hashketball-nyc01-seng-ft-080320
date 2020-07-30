@@ -215,7 +215,9 @@ def winning_team
   game_hash.each do |location, team_data|
     if location == :home
       team_data.each do |attribute, data|
-        binding.pry
+        if attribute == :players
+          data.each { |d_i| points_home += d_i[points] }
+        end
       end
     end
   end
