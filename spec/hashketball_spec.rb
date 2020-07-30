@@ -184,6 +184,7 @@ describe 'hashketball' do
 
     it 'returns the number of rebounds of the player with the biggest shoe size' do
       expect(big_shoe_rebounds).to eq(11)
+      expect(big_shoe_rebounds).to eq("Ben Gordon")
     end
 
   end
