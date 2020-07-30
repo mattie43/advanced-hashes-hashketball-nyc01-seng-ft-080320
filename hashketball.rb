@@ -213,6 +213,10 @@ def winning_team
   points_home = 0
   points_away = 0
   game_hash.each do |location, team_data|
-    binding.pry
+    if location == :home
+      team_data.each do |attribute, data|
+        binding.pry
+      end
+    end
   end
 end
