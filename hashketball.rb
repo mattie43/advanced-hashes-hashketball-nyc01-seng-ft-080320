@@ -209,7 +209,7 @@ def most_points_scored
 end
 
 def winning_team
-  winner = ""
+  team_home = ""
   points_home = 0
   points_away = 0
   game_hash.each do |location, team_data|
@@ -219,6 +219,13 @@ def winning_team
           data.each { |d_i| points_home += d_i[points] }
         end
       end
+    else
+      team_data.each do |attribute, data|
+        if attribute == :players
+          data.each { |d_i| points_away += d_i[points] }
+        end
+      end
     end
   end
+  points_home if 
 end
