@@ -172,18 +172,13 @@ def player_stats(player_name)
   end
 end
 def big_shoe_rebounds
-  #find largest shoe, return number of rebounds
   shoe_size = 0
   rebounds = 0
   game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each do |d_i|
-          if shoe_size < d_i[:shoe]
-            shoe_size = d_i[:shoe]
-            rebounds = d_i[:rebounds]
-          end
-        end
+    team_data.each do |data|
+      if shoe_size < data[:shoe]
+        shoe_size = data[:shoe]
+        rebounds = data[:rebounds]
       end
     end
   end
@@ -222,7 +217,7 @@ def player_with_longest_name
   player = ""
   game_hash.each do |location, team_data|
     team_data[:players].each do |data|
-          player = data[:player_name] if data[:player_name].length > player.length
+      player = data[:player_name] if data[:player_name].length > player.length
     end
   end
   player
