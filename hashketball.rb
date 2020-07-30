@@ -218,6 +218,10 @@ def winning_team
     data.each { |d_i| points_home += d_i[:points] }
   end
   
+  game_hash[:away][:players].each do |data|
+    data.each { |d_i| points_away += d_i[:points] }
+  end
+  
   if points_home > points_away
     team_home
   else
