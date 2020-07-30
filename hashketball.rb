@@ -230,5 +230,9 @@ def winning_team
       end
     end
   end
-  team_home if points_home > points_away
+  if points_home > points_away
+    team_home
+  else
+    team_away
+  end
 end
