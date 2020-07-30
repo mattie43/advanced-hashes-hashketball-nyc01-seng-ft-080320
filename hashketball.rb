@@ -218,14 +218,14 @@ def winning_team
       team_data.each do |attribute, data|
         team_home = data if attribute == :team_name
         if attribute == :players
-          data.each { |d_i| points_home += d_i[points] }
+          data.each { |d_i| points_home += d_i[:points] }
         end
       end
     else
       team_data.each do |attribute, data|
         team_away = data if attribute == :team_name
         if attribute == :players
-          data.each { |d_i| points_away += d_i[points] }
+          data.each { |d_i| points_away += d_i[:points] }
         end
       end
     end
