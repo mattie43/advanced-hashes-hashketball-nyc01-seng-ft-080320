@@ -184,6 +184,13 @@ describe 'hashketball' do
 
     it 'returns the number of rebounds of the player with the biggest shoe size' do
       expect(big_shoe_rebounds).to eq(11)
+    end
+
+  end
+  
+  describe '#most_points_scored' do
+
+    it 'returns the name of the player with the most points' do
       expect(most_points_scored).to eq("Ben Gordon")
     end
 
